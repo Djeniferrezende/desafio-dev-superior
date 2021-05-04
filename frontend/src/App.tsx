@@ -17,7 +17,7 @@ function App() {
           <h5>taxa de sucesso</h5>
           < Barchart / >
         </div>
-         <div className="col-sm-6">
+          <div className="col-sm-6">
           <h5>taxa de sucesso</h5>
           < Donutchart / >
         </div>
