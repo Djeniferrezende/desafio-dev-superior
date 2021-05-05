@@ -16,7 +16,8 @@ const options = {
       <Chart options ={{...options, labels:mockData.labels}}
       series ={mockData.series}
       type="donut"
-      heigth="240"/ >
+      heigth="240"
+      />
 
 
   );

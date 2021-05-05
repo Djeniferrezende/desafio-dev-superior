@@ -10,20 +10,22 @@ function App() {
     <>
      <NavBar />
      <div className="container">
-    <div>
       <h1 className="text-primary py-3">Dashbord de vendas</h1>
       <div className="row px-3">
         <div className="col-sm-6">
-          <h5>taxa de sucesso</h5>
+          <h5 className="text-secondary">Taxa de sucesso</h5>
           < Barchart / >
         </div>
-          <div className="col-sm-6">
-          <h5>taxa de sucesso</h5>
+        <div className="col-sm-1"></div>
+          <div className="col-sm-5">
+          <h5  className="text-width-2 text-secondary">Todas as Vendas</h5>
           < Donutchart / >
         </div>
       </div>
+      <div className="py-3">
+        <h2 className="text-primary">Todas Vendas</h2>
       < DataTable />
-    </div>
+</div>
     </div>
     < Footer />
     </>
