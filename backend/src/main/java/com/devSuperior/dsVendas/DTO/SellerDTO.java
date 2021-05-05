@@ -1,5 +1,6 @@
 package com.devSuperior.dsVendas.DTO;
 
+import com.devSuperior.dsVendas.entities.Sales;
 import com.devSuperior.dsVendas.entities.Seller;
 
 import java.io.Serializable;
@@ -9,7 +10,7 @@ public class SellerDTO implements Serializable {
     private Long id;
     private String name;
 
-    public SellerDTO(){
+    public SellerDTO(Sales x){
 
     }
 
