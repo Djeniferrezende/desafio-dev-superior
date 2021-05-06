@@ -1,9 +1,9 @@
 package com.devSuperior.dsVendas.Resources;
 
 import com.devSuperior.dsVendas.DTO.SaleDTO;
-import com.devSuperior.dsVendas.DTO.SellerDTO;
+import com.devSuperior.dsVendas.DTO.SalesAmountDTO;
+import com.devSuperior.dsVendas.DTO.SalesSumDTO;
 import com.devSuperior.dsVendas.services.SalesService;
-import com.devSuperior.dsVendas.services.SellerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -27,6 +27,19 @@ public class SalesResource {
         Page<SaleDTO> list = service.findAll(pageable);
         return ResponseEntity.ok(list);
     }
+    @GetMapping(value="sum-by-seller")
+    public ResponseEntity <List<SalesSumDTO>> sumGroupedBySeller(){
+        List<SalesSumDTO> list = service.sumGroupedBySeller();
+        return ResponseEntity.ok(list);
+    }
+    @GetMapping(value="amount-by-seller")
+    public ResponseEntity <List<SalesAmountDTO>> amountGroupedBySeller(){
+        List<SalesAmountDTO> list = service.amountGroupedBySeller();
+        return ResponseEntity.ok(list);
+    }
+
+
+
     }
 
 
